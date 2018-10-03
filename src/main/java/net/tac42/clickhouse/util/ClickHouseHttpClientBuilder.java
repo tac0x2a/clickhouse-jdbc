@@ -81,6 +81,7 @@ public class ClickHouseHttpClientBuilder {
 
         connectionManager.setDefaultMaxPerRoute(properties.getDefaultMaxPerRoute());
         connectionManager.setMaxTotal(properties.getMaxTotal());
+        connectionManager.setDefaultConnectionConfig(getConnectionConfig());
         return connectionManager;
     }
 
