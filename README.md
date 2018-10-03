@@ -18,7 +18,7 @@ URL syntax:
 `jdbc:clickhouse://<host>:<port>[/<database>]`, e.g. `jdbc:clickhouse://localhost:8123/test`
 
 JDBC Driver Class:
-`ru.yandex.clickhouse.ClickHouseDriver`
+`net.tac42.clickhouse.ClickHouseDriver`
 
 additionally, if you have a few instances, you can use `BalancedClickhouseDataSource`.
 
