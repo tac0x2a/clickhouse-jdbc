@@ -4,7 +4,7 @@
 
     <groupId>net.tac42.clickhouse</groupId>
     <artifactId>clickhouse-jdbc-exp</artifactId>
-    <version>0.1</version>
+    <version>0.1.42</version>
     <packaging>jar</packaging>
 
     <name>clickhouse-jdbc-exp</name>
@@ -48,6 +48,8 @@
     </developers>
 
     <properties>
+        <generate.pom>true</generate.pom>
+        <gpg.skip>true</gpg.skip>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -115,13 +117,10 @@
     </dependencies>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>bintray-tac0x2a-click-house-jdbc-exp</id>
+            <name>tac0x2a-click-house-jdbc-exp</name>
+            <url>https://api.bintray.com/maven/tac0x2a/click-house-jdbc-exp/click-house-jdbc-exp/;publish=1</url>
         </repository>
     </distributionManagement>
 
