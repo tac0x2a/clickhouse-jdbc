@@ -1,20 +1,82 @@
-[![clickhouse-jdbc](https://maven-badges.herokuapp.com/maven-central/ru.yandex.clickhouse/clickhouse-jdbc/badge.svg)](https://maven-badges.herokuapp.com/maven-central/ru.yandex.clickhouse/clickhouse-jdbc) [![Build Status](https://travis-ci.org/yandex/clickhouse-jdbc.svg?branch=master)](https://travis-ci.org/yandex/clickhouse-jdbc)
-ClickHouse JDBC driver
+
+ClickHouse JDBC experimentally driver
 ===============
 
 This is a basic and restricted implementation of jdbc driver for ClickHouse.
 It has support of a minimal subset of features to be usable.
 
+This project was forked from [yandex/clickhouse-jdbc](https://github.com/yandex/clickhouse-jdbc) for publishing jar file that contain experimentally features before merge to original.
+
 ### Usage
+#### Maven
+
+pom.xml
 ```xml
+...
 <dependency>
-    <groupId>ru.yandex.clickhouse</groupId>
-    <artifactId>clickhouse-jdbc</artifactId>
-    <version>0.1.42</version>
+  <groupId>net.tac42.clickhouse</groupId>
+  <artifactId>clickhouse-jdbc-exp</artifactId>
+  <version>0.1.42</version>
+  <type>pom</type>
 </dependency>
+...
 ```
 
-URL syntax: 
+settings.xml
+```xml
+    ...
+    <profiles>
+        <profile>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-tac0x2a-click-house-jdbc-exp</id>
+                    <name>bintray</name>
+                    <url>https://dl.bintray.com/tac0x2a/click-house-jdbc-exp</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>bintray-tac0x2a-click-house-jdbc-exp</id>
+                    <name>bintray-plugins</name>
+                    <url>https://dl.bintray.com/tac0x2a/click-house-jdbc-exp</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>bintray</id>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>bintray</activeProfile>
+    </activeProfiles>
+    ...
+```
+
+#### Gradle
+
+build.gradle
+```groovy
+repositories {
+    ...
+    maven {
+        url "https://dl.bintray.com/tac0x2a/click-house-jdbc-exp"
+    }
+    ...
+}
+...
+dependencies {
+    ...
+    compile "net.tac42.clickhouse:clickhouse-jdbc-exp:0.1.42"
+    ...
+}
+```
+
+### Code
+URL syntax:
 `jdbc:clickhouse://<host>:<port>[/<database>]`, e.g. `jdbc:clickhouse://localhost:8123/test`
 
 JDBC Driver Class:
