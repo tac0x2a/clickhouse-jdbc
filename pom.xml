@@ -2,14 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.yandex.clickhouse</groupId>
-    <artifactId>clickhouse-jdbc</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <groupId>net.tac42.clickhouse</groupId>
+    <artifactId>clickhouse-jdbc-exp</artifactId>
+    <version>0.1</version>
     <packaging>jar</packaging>
 
-    <name>clickhouse-jdbc</name>
-    <description>JDBC driver for ClickHouse</description>
-    <url>https://github.com/yandex/clickhouse-jdbc</url>
+    <name>clickhouse-jdbc-exp</name>
+    <description>Experimentally JDBC driver for ClickHouse</description>
+    <url>https://github.com/tac0x2a/clickhouse-jdbc</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -18,27 +18,33 @@
         </license>
     </licenses>
     <scm>
-        <url>https://github.com/yandex/clickhouse-jdbc</url>
-        <connection>scm:git@github.com:yandex/clickhouse-jdbc.git</connection>
-        <developerConnection>scm:git@github.com:yandex/clickhouse-jdbc.git</developerConnection>
+        <url>https://github.com/tac0x2a/clickhouse-jdbc</url>
+        <connection>scm:git@github.com:tac0x2a/clickhouse-jdbc.git</connection>
+        <developerConnection>scm:git@github.com:tac0x2a/clickhouse-jdbc.git</developerConnection>
     </scm>
 
     <developers>
         <developer>
-            <id>serebrserg</id>
-            <name>Sergey Serebryanik</name>
-            <email>serebrserg@yandex-team.ru</email>
+            <id>tac0x2a</id>
+            <name>TAC</name>
+            <email>tac@tac42.net</email>
         </developer>
-        <developer>
-            <id>jkee</id>
-            <name>Viktor Tarnavsky</name>
-            <email>jkee@yandex-team.ru</email>
-        </developer>
-        <developer>
-            <id>orantius</id>
-            <name>Yuriy Galitskiy</name>
-            <email>orantius@yandex-team.ru</email>
-        </developer>
+        <!-- Original Developers -->
+        <!--<developer>-->
+            <!--<id>serebrserg</id>-->
+            <!--<name>Sergey Serebryanik</name>-->
+            <!--<email>serebrserg@yandex-team.ru</email>-->
+        <!--</developer>-->
+        <!--<developer>-->
+            <!--<id>jkee</id>-->
+            <!--<name>Viktor Tarnavsky</name>-->
+            <!--<email>jkee@yandex-team.ru</email>-->
+        <!--</developer>-->
+        <!--<developer>-->
+            <!--<id>orantius</id>-->
+            <!--<name>Yuriy Galitskiy</name>-->
+            <!--<email>orantius@yandex-team.ru</email>-->
+        <!--</developer>-->
     </developers>
 
     <properties>
